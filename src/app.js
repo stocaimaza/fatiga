@@ -12,7 +12,7 @@ const PUERTO = process.env.PUERTO || 8080;
 //require("./database.js");
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb+srv://swtocaimaza:coderhouse@cluster0.pmzgicx.mongodb.net/E-commerce?retryWrites=true&w=majority&appName=Cluster0")
+mongoose.connect(process.env.MONGO_URL)
     .then(() => console.log("Conexión exitosa"))
     .catch((error) => console.log("Vamos a morir, tenemos un error", error))
     
