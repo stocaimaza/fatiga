@@ -14,7 +14,7 @@ const mongoose = require("mongoose");
 
 mongoose.connect(process.env.MONGO_URL)
     .then(() => console.log("Conexión exitosa"))
-    .catch(() => console.log("Vamos a morir, tenemos un error"))
+    .catch((error) => console.log("Vamos a morir, tenemos un error", error))
     
 
 const productsRouter = require("./routes/products.router.js");
